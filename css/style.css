@@ -129,6 +129,11 @@ ul.each-element{
     margin: 30px -10px 15px 15px;
 }
 
+.div-horizontal-separator{
+    border-bottom: 1px solid #F1EAE0;
+    margin: 30px -10px 30px 15px;
+}
+
 .dialy-specials{
     list-style-type: none;
     padding-left: 10px;
@@ -142,4 +147,30 @@ ul.each-element{
 
 .dialy-specials li:first-child{
     border-top: 1px solid #F1EAE0;
+}
+
+.form-control {
+    background-color: #fffcf5;
+    border: 2px solid #F1EAE0;
+}
+
+textarea.form-control{
+    resize: vertical;
+}
+
+Label.error{
+    background-color: #EB5E28;
+    padding: 0.4em 0.6em;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+textarea.error, input.error{
+    border: 2px solid #EB5E28;
 }
