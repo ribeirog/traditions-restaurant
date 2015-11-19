@@ -1,0 +1,145 @@
+body{
+    font-family: 'Montserrat', "Helvetica", Arial, sans-serif;
+}
+
+.home-background{
+    background: url('../images/meall1.jpg')  no-repeat top center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .home-background{
+        background: url('../images/meall1.jpg')  no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-height: 100vh;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav > li > a.btn-position-menu{
+        margin-left: 40px;
+    }
+    .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev, .carousel-control .icon-next {
+        width: 30px;
+        height: 30px;
+        margin-top: -12px;
+        font-size: 20px;
+    }
+}
+
+.logo-nav{
+    max-width: 256px;
+}
+
+.home-heading-container{
+    margin-top: 50%;
+    margin-bottom: 3.5%;
+}
+
+.heading-home-page{
+    background-color: #EB5E28;
+    color: #FFFFFF;
+    padding: 10px;
+    display:inline-block;
+    margin-top: 5px;
+}
+
+h1.heading-home-page{
+    letter-spacing: -3.5px;
+}
+
+.carousel-inner > .item {
+    padding: 0px;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    border-radius: 0px;
+    box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+    margin-left: 0%;
+    max-width: 100%;
+}
+
+hr.footer-hours{
+    margin: 5px;
+}
+
+.inline{
+    display: inline;
+}
+
+.text-italic{
+    font-style: italic;
+}
+
+.image-background{
+    background: url("../images/meal4.png") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    max-height: 550px;
+}
+
+.main-block{
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+.nav-tabs > li > a.menu-category-element{
+    width: 140px;
+    height: 100px;
+    text-align: center;
+    padding-top: 28%;
+}
+
+.menu-elements{
+    background-color: #fffcf5;
+    border: 1px solid #F1EAE0;
+}
+
+.element-by-category{
+    margin: 15px;
+}
+
+ul.each-element{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.each-element li{
+    border-bottom: 1px solid #F1EAE0;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.each-element li:hover{
+    background-color: #F1EAE0;
+}
+
+.horizontal-separator{
+    border: 1px solid #F1EAE0;
+    margin: 30px -10px 15px 15px;
+}
+
+.dialy-specials{
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.dialy-specials li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F1EAE0;
+}
+
+.dialy-specials li:first-child{
+    border-top: 1px solid #F1EAE0;
+}

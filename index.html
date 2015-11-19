@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Traditions Restaurant</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/paper.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+
+</head>
+<body class="home-background">
+
+<div ng-app="">
+
+    <div id="navbar">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="images/logo.png" class="logo-nav" />
+                </div>
+                <div class="navbar-collapse collapse" role="navigation">
+                    <ul class="nav navbar-nav pull-right">
+                        <li><a href="index.html" class="btn btn-danger active btn-position-menu">Home</a></li>
+                        <li><a href="menu.html" class="btn btn-danger btn-position-menu">Menu</a></li>
+                        <li><a href="about-us.html" class="btn btn-danger btn-position-menu">About Us</a></li>
+                        <li><a href="javascript:void(0)" class="btn btn-danger btn-position-menu">Contact</a></li>
+                        <li><a href="javascript:void(0)" class="btn btn-default btn-position-menu">Book a Table</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div><!--  end navbar -->
+
+
+    <!-- Site banner -->
+    <div class="banner">
+        <div class="container">
+            <div class="home-heading-container">
+                <h1 class="heading-home-page">Traditions Restaurant</h1>
+                <h3 class="heading-home-page">Full Service Restaurant and Bar Serving Breakfast, Lunch and Dinner</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="section">
+        <div class="container">
+            <div class="row" id="modals">
+                <div class="col-md-6">
+                    <div class="tim-title">
+                        <h3>Welcome to</h3>
+                        <img src="images/logo.png" class="center-block img-responsive" />
+                    </div>
+                    <p>
+                        Looking for a new location to hold your next event? Check out Traditions at Pertle Springs!
+                        As a staple of Mules National Golf Club, Traditions is the perfect setting for a wedding reception,
+                        class reunion, business meeting or to enjoy our rotation Friday Night Features from our Executive Chef,
+                        Dale McDonald. Traditions has served countless couples, families, and organizations stage their events
+                        with a range of culinary options, full-service bar, and a professional event-planning staff.
+                    </p>
+                    <div style="display: inline-block">
+                        <label class="inline text-italic">Interested? Give us a call: </label>
+                        <h3 class="inline" style="margin-left: 20px"><span class="glyphicon glyphicon-earphone"></span> (660) 543 8694</h3>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <br><br>
+                    <div id="photo-slides" class="carousel slide img-thumbnail" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="images/slide2.jpg" alt="" />
+                            </div>
+                            <div class="item">
+                                <img src="images/slide3.jpg" alt=""  />
+                            </div>
+                            <div class="item">
+                                <img src="images/slide4.jpg" alt=""  />
+                            </div>
+                            <div class="item">
+                                <img src="images/slide5.jpg" alt=""  />
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#photo-slides" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#photo-slides" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="clearfix"></div><br><br>
+
+            </div><!--  end row -->
+        </div>
+    </div>
+
+    <!-- Site footer -->
+    <div class="bottom  section-dark-blue">
+        <div class="container"><br>
+            <div class="col-md-4">
+                <img src="images/mules%20nation.png" class="text-center" />
+                <br><br>
+            </div>
+            <div class="col-md-4">
+                <br>
+                <p><b>(660) 543-8694</b></p>
+                <p>Five Par Rd<br>Warrensburg, Missouri</p>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-3">
+                    <br><b>Hours:</b>
+                </div>
+                <div class="col-md-9">
+                    <br>
+                    Mon-Fri: 11:00 am-10:00 pm
+                    <hr class="footer-hours">
+                    Sat: 7:30 am-2:00 pm
+                    <hr class="footer-hours">
+                    Sun: 7:30 am-8:00 pm
+                    <br><br>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
