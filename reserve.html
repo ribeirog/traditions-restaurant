@@ -149,7 +149,7 @@
                                         <div class="progress" style="height: 35px;">
                                             <div class="progress-bar progress-bar-danger progress-bar-striped active" style="width: 100%"></div>
                                         </div>
-                                        <p class="text-center">Loading tables.</p>
+                                        <p class="text-center loading-tables">Loading tables.</p>
                                     </div>
                                     <div class="col-md-4"></div>
                                     <div class="col-md-12"></div>
@@ -161,35 +161,42 @@
                                         <br>
                                         <span>You have selected: </span>
                                         <h3 style="margin-top: 0px;">Table for {{data.people}}, around {{data.time}}</h3>
+                                        <p>Here are the tables that matches with your needs. Select one of the tables that you want to confirm the reservation.</p>
+
+                                        <hr>
 
                                         <div ng-init="tables=[
-                                            {table: 1, capacity: 4},
-                                            {table: 2, capacity: 3},
-                                            {table: 3, capacity: 2},
-                                            {table: 4, capacity: 6},
-                                            {table: 5, capacity: 8},
-                                            {table: 6, capacity: 4},
-                                            {table: 7, capacity: 10},
-                                            {table: 8, capacity: 6},
-                                            {table: 9, capacity: 5},
-                                            {table: 10, capacity: 6},
-                                            {table: 11, capacity: 8},
-                                            {table: 12, capacity: 7},
-                                            {table: 13, capacity: 12},
-                                            {table: 14, capacity: 2},
-                                            {table: 15, capacity: 6},
-                                            {table: 16, capacity: 4}]">
+                                            {table: 1, capacity: 4, local: 'inside'},
+                                            {table: 2, capacity: 3, local: 'inside'},
+                                            {table: 3, capacity: 2, local: 'inside'},
+                                            {table: 4, capacity: 6, local: 'inside'},
+                                            {table: 5, capacity: 8, local: 'inside'},
+                                            {table: 6, capacity: 4, local: 'inside'},
+                                            {table: 7, capacity: 10, local: 'inside'},
+                                            {table: 8, capacity: 6, local: 'inside'},
+                                            {table: 9, capacity: 5, local: 'inside'},
+                                            {table: 10, capacity: 6, local: 'inside'},
+                                            {table: 11, capacity: 8, local: 'inside'},
+                                            {table: 12, capacity: 7, local: 'outside'},
+                                            {table: 13, capacity: 12, local: 'inside'},
+                                            {table: 14, capacity: 2, local: 'outside'},
+                                            {table: 15, capacity: 6, local: 'outside'},
+                                            {table: 16, capacity: 4, local: 'outside'}]">
 
-                                                <ul class="each-element">
-                                                    <li ng-repeat="table in tables" class="cells2" data-capacity="{{table.capacity}}" data-people="{{data.people}}">
-                                                        <div class="container">
-                                                            <div class="col-md-8">
-                                                                <p>Table: {{table.table}} - Capacidade: {{table.capacity}}</p>
-                                                            </div>
+                                            <ul class="each-element">
+                                                <li ng-repeat="table in tables" class="cells2" data-capacity="{{table.capacity}}" data-people="{{data.people}}">
+                                                    <div class="container">
+                                                        <div class="col-md-4">
+                                                            <h5><b>Table {{table.table}}</b></h5>
+                                                            <p>Capacidade: {{table.capacity}} - Location: {{table.local}}</p>
+                                                            <br>
                                                         </div>
-                                                    </li>
-                                                </ul>
-
+                                                        <div class="col-md-4">
+                                                            <button class="btn btn-danger reserve-btn" style="margin-top: 27px" data-table="{{table.table}}" >Reserve this table</button>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
                                         </div>
 
 
@@ -203,7 +210,7 @@
                                 <div class="">
                                     <div class="col-md-12">
 
-                                        <h3>Table for {{data.people}}, around {{data.time}}</h3>
+                                        <h3>Step 4</h3>
 
 
 
@@ -274,10 +281,12 @@
         $(".first-step").hide();
         $(".second-step").show();
 
+
         setTimeout(showThird, 3000);
 
         function showThird(){
             $(".second-step").hide();
+            $(".loading-tables").text("Loading Tables.");
             $(".third-step").show();
             cleanFields();
         };
@@ -290,6 +299,21 @@
                 else this.style.display = "none";
             });
         };
+    });
+
+    $(document).ready(function () {
+        $(".reserve-btn").click(function () {
+            $(".third-step").hide();
+            $(".loading-tables").text("Loading Reservation.");
+            $(".second-step").show();
+
+            setTimeout(showThird, 1000);
+
+            function showThird() {
+                $(".second-step").hide();
+                $(".fourth-step").show();
+            };
+        });
     });
 
 </script>
