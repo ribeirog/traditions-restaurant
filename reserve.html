@@ -33,8 +33,8 @@
                         <li><a href="index.html" class="btn btn-danger btn-position-menu">Home</a></li>
                         <li><a href="menu.html" class="btn btn-danger btn-position-menu">Menu</a></li>
                         <li><a href="about-us.html" class="btn btn-danger btn-position-menu">About Us</a></li>
-                        <li><a href="contact.html" class="btn btn-danger active btn-position-menu">Contact</a></li>
-                        <li><a href="reserve.html" class="btn btn-default btn-position-menu">Book a Table</a></li>
+                        <li><a href="contact.html" class="btn btn-danger btn-position-menu">Contact</a></li>
+                        <li><a href="reserve.html" class="btn btn-default active btn-position-menu">Book a Table</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -48,20 +48,21 @@
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
                     <li role="presentation" class="active"><a href="#Appetizers" aria-controls="Appetizers" role="tab" data-toggle="tab" class="menu-category-element">Book a Table</a></li>
+                    <li class="pull-right"><label class="phone-guide-element">(660) 543-8694</label></li>
                 </ul>
 
                 <!-- Tab panes -->
                 <div class="tab-content menu-elements">
                     <div role="tabpanel" class="tab-pane active" id="Appetizers" style="display: inline-block;">
                         <div class="element-by-category">
-                            <div class="col-md-6">
+                            <div class="col-md-7">
                                 <br>
                                 <p>To reserve a table, please fill the form below. We will send you an email afterwards
                                     with the confirmation. If you have any question, please do not hesitate in contact us.</p>
                                 <p>If you want to cancel your reservation, you can click in the link on the
                                         confirmation e-mail that was sent to you.</p>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-5">
                                 <h3>Opening hours</h3>
                                 <dl class="dl-horizontal">
                                     <dt>Monday - Friday</dt>
@@ -73,37 +74,65 @@
                                 </dl>
                             </div>
 
-
                             <div class="col-md-12 div-horizontal-separator"></div>
 
-                            <div class="col-md-12">
-                                <form class="" id="contactForm">
+                            <div class="col-md-12" id="">
+                                <form class="" id="reserve-table">
+                                    <h2>Table Reservation</h2>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="name">Name</label>
-                                            <input type="text" class="form-control" id="name" placeholder="Jane Doe" required minlength="2">
+                                            <label for="date">Choose a date</label>
+                                            <input class="datepicker form-control" type="text" id="date"/>
+                                            <span class="glyphicon glyphicon-calendar icon-inside-input"></span>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="email">Email</label>
-                                            <input type="email" class="form-control" id="email" placeholder="jane.doe@example.com" required>
+                                            <label for="time">Choose a time</label>
+                                            <select class="form-control" id="time">
+                                                <option>Select</option>
+                                                <option>7:00 a.m.</option>
+                                                <option>8:00 a.m.</option>
+                                                <option>9:00 a.m.</option>
+                                                <option>10:00 a.m.</option>
+                                                <option>11:00 a.m.</option>
+                                                <option>12:00 a.m.</option>
+                                                <option>1:00 p.m.</option>
+                                                <option>2:00 p.m.</option>
+                                                <option>3:00 p.m.</option>
+                                                <option>4:00 p.m.</option>
+                                                <option>5:00 p.m.</option>
+                                                <option>6:00 p.m.</option>
+                                                <option>7:00 p.m.</option>
+                                                <option>8:00 p.m.</option>
+                                                <option>9:00 p.m.</option>
+                                                <option>10:00 p.m.</option>
+                                            </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
+                                    <div class="col-md-12"></div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="people">How many people</label>
+                                            <label for="time">Choose a time</label>
+                                            <select class="form-control" id="people">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>8</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                                <option>+10</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
                                         <br>
-                                        <textarea class="form-control" rows="5" required></textarea>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group"><br>
-
-                                            <label for="phone">Phone</label>
-                                            <input type="text" class="form-control" id="phone" placeholder="(660) 543-8694">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <br><br>
-                                        <button type="submit" class="btn btn-default pull-right">Send the Message</button>
+                                        <button type="submit" class="btn btn-default btn-block pull-right">Find a Table</button>
                                     </div>
                                 </form>
 
@@ -155,14 +184,16 @@
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="js/angular.min.js"></script>
 <script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
 <script src="js/jquery.validate.js"></script>
 
 <script>
-    $('#myTabs a').click(function (e) {
-        e.preventDefault()
-        $(this).tab('show')
-    })
-    $("#contactForm").validate();
+    $('.datepicker').datepicker({
+        minDate: +0,
+        color: 'red'
+    });
+    $("#reserve-table").validate();
+
 </script>
 
 </body>
