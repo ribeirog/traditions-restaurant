@@ -174,3 +174,25 @@ Label.error{
 textarea.error, input.error{
     border: 2px solid #EB5E28;
 }
+
+.phone-guide-element{
+    font-size: 30px;
+    margin-right: 20px;
+    margin-top: 28px;
+}
+
+.icon-inside-input{
+    position: absolute;
+    right: 25px;
+    top: 40px;
+}
+
+.second-step{
+    margin-top: 20%;
+    margin-bottom: 20%;
+    display: none;
+}
+
+.third-step, .fourth-step{
+    display: none;
+}
