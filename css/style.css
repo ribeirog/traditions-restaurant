@@ -186,3 +186,13 @@ textarea.error, input.error{
     right: 25px;
     top: 40px;
 }
+
+.second-step{
+    margin-top: 20%;
+    margin-bottom: 20%;
+    display: none;
+}
+
+.third-step, .fourth-step{
+    display: none;
+}
