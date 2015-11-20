@@ -196,3 +196,7 @@ textarea.error, input.error{
 .third-step, .fourth-step{
     display: none;
 }
+
+.product{
+    font-size: 20px;
+}
