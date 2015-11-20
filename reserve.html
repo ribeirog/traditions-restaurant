@@ -9,7 +9,7 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/paper.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-
+    <link href="css/sweetalert.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -26,7 +26,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <img src="images/logo.png" class="logo-nav" />
+                    <a href="index.html"><img src="images/logo.png" class="logo-nav" /></a>
                 </div>
                 <div class="navbar-collapse collapse" role="navigation">
                     <ul class="nav navbar-nav pull-right">
@@ -184,7 +184,7 @@
                                             {table: 16, capacity: 4, local: 'outside'}]">
 
                                             <ul class="each-element">
-                                                <li ng-repeat="table in tables" class="cells2" data-capacity="{{table.capacity}}" data-people="{{data.people}}">
+                                                <li ng-repeat="table in tables | orderBy:'capacity'" class="cells2" data-capacity="{{table.capacity}}" data-people="{{data.people}}">
                                                     <div class="container">
                                                         <div class="col-md-4">
                                                             <h5><b>Table {{table.table}}</b></h5>
@@ -209,12 +209,50 @@
                             <div class="fourth-step">
                                 <div class="">
                                     <div class="col-md-12">
+                                        <div class="col-md-12">
+                                            <h2>Table Confirmation</h2>
 
-                                        <h3>Step 4</h3>
+                                            <br>
+                                            <p>You have selected:</p>
+                                            <p>A table for {{data.people}}, around {{data.time}}</p>
+                                            <br>
 
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="name">Name</label>
+                                                    <input type="text" class="form-control" id="name" placeholder="Jane Doe" required minlength="2">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="email">Email</label>
+                                                    <input type="email" class="form-control" id="email" placeholder="jane.doe@example.com" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group"><br>
 
+                                                    <label for="phone">Phone</label>
+                                                    <input type="text" class="form-control" id="phone" placeholder="(660) 543-8694">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group"><br>
 
-
+                                                    <label for="request">Any Special Request?</label>
+                                                    <input type="text" class="form-control" id="request" placeholder="Baby chair">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <br>
+                                                <a href="reserve.html" class="btn btn-neutral btn-sm" style="color: #66615B;">Cancel</a>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <br>
+                                                <button type="submit" class="btn btn-default btn-block pull-right submit-last-action">Confirm the reservation</button>
+                                                <br><br>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-md-12"></div>
                                 </div>
@@ -269,6 +307,7 @@
 <script src="js/bootstrap.js"></script>
 <script src="js/bootstrap-datepicker.js"></script>
 <script src="js/jquery.validate.js"></script>
+<script src="js/sweetalert.min.js"></script>
 
 <script>
     $('.datepicker').datepicker({
@@ -314,7 +353,20 @@
                 $(".fourth-step").show();
             };
         });
+
+
     });
+
+    document.querySelector('.submit-last-action').onclick = function(){
+        $(".fourth-step").hide();
+        $(".first-step").show();
+        swal({
+            title: "Your table was booked with success!",
+            text: "We have sent you an e-mail with the details of your reservation. Feel free to contact us. If you need to cancel your reservation, there is a link in the e-mail where you can cancel your reservation.",
+            type: "success",
+            confirmButtonText: "We will be waiting for you! =D"
+        });
+    };
 
 </script>
 

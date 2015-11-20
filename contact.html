@@ -9,6 +9,7 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/paper.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/sweetalert.css" rel="stylesheet" />
 
 
 </head>
@@ -26,7 +27,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <img src="images/logo.png" class="logo-nav" />
+                    <a href="index.html"><img src="images/logo.png" class="logo-nav" /></a>
                 </div>
                 <div class="navbar-collapse collapse" role="navigation">
                     <ul class="nav navbar-nav pull-right">
@@ -75,7 +76,7 @@
                             <div class="col-md-12 div-horizontal-separator"></div>
 
                             <div class="col-md-12">
-                                <form class="" id="contactForm">
+                                <div class="" id="contactForm">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="name">Name</label>
@@ -101,9 +102,9 @@
                                     </div>
                                     <div class="col-md-6">
                                         <br><br>
-                                        <button type="submit" class="btn btn-default btn-block">Send the Message</button>
+                                        <button class="btn btn-default btn-block send-message">Send the Message</button>
                                     </div>
-                                </form>
+                                </div>
 
                             </div>
                         </div>
@@ -151,16 +152,23 @@
 
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script src="js/angular.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/jquery.validate.js"></script>
+<script src="js/sweetalert.min.js"></script>
 
 <script>
-    $('#myTabs a').click(function (e) {
-        e.preventDefault()
-        $(this).tab('show')
-    })
     $("#contactForm").validate();
+
+    document.querySelector('.send-message').onclick = function(){
+        $(".fourth-step").hide();
+        $(".first-step").show();
+        swal({
+            title: "We received your message!",
+            text: "As soon as we read your message, we will contact you. Thank you very much for you contact.",
+            type: "success",
+            confirmButtonText: "Okay"
+        });
+    };
 </script>
 
 </body>
