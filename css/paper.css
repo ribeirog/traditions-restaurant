@@ -2040,8 +2040,10 @@ textarea.form-control {
   display: inline-block;
   position: absolute;
   right: 40%;
-  bottom: -1px;
+  bottom: -50px;
 }
+
+/*
 .nav-tabs > li.active :before {
   border-bottom: 11px solid #F1EAE0;
   border-left: 11px solid transparent;
@@ -2052,6 +2054,8 @@ textarea.form-control {
   right: 40%;
   bottom: 1px;
 }
+*/
+
 
 /*             Navigation Pills               */
 .nav-pills > li + li {
@@ -3110,11 +3114,11 @@ textarea.form-control {
  * http://www.apache.org/licenses/LICENSE-2.0
  *
  */
-/*  
+/*
  *
  *   SCSS by Creative Tim
  *   http://www.creative-tim.com
- *   
+ *
  */
 .datepicker {
   top: 0;

@@ -83,8 +83,9 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="date">Choose a date</label>
-                                                <input class="datepicker form-control" type="text" id="date" name="date" required />
-                                                <span class="glyphicon glyphicon-calendar icon-inside-input"></span>
+                                                <input class="datepicker form-control dateInput" type="text" id="date" name="date" required>
+                                                <!-- <span class="glyphicon glyphicon-calendar icon-inside-input"></span> -->
+                                            </input>
 
                                             </div>
                                         </div>
@@ -301,8 +302,8 @@
 
 </div>
 
-<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="js/angular.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/bootstrap-datepicker.js"></script>
@@ -314,6 +315,7 @@
         minDate: +0,
         color: 'red'
     });
+
     $("#reserve-table").validate();
 
     $(".submit-form-action").click(function(){
@@ -366,6 +368,9 @@
             type: "success",
             confirmButtonText: "We will be waiting for you! =D"
         });
+        $(".dateInput").val('');
+        $("#time").val('');
+        $("#people").val('');
     };
 
 </script>
