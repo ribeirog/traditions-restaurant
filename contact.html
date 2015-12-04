@@ -80,24 +80,24 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="name">Name</label>
-                                            <input type="text" class="form-control" id="name" placeholder="Jane Doe" required minlength="2">
+                                            <input type="text" class="form-control name" id="name" placeholder="Jane Doe" required minlength="2">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="email">Email</label>
-                                            <input type="email" class="form-control" id="email" placeholder="jane.doe@example.com" required>
+                                            <input type="email" class="form-control email" id="email" placeholder="jane.doe@example.com" required>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <br>
-                                        <textarea class="form-control" rows="5" required></textarea>
+                                        <textarea class="form-control text" rows="5" required></textarea>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group"><br>
 
                                             <label for="phone">Phone</label>
-                                            <input type="text" class="form-control" id="phone" placeholder="(660) 543-8694">
+                                            <input type="text" class="form-control phone" id="phone" placeholder="(660) 543-8694">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -124,7 +124,7 @@
             <div class="col-md-4">
                 <img src="images/mules%20nation.png" class="text-center" />
                 <br><br>
-                
+
             </div>
             <div class="col-md-4">
                 <br>
@@ -151,8 +151,8 @@
 
 </div>
 
-<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/jquery.validate.js"></script>
 <script src="js/sweetalert.min.js"></script>
@@ -169,6 +169,10 @@
             type: "success",
             confirmButtonText: "Okay"
         });
+		$(".name").val('');
+		$(".email").val('');
+		$(".phone").val('');
+		$(".text").val('');
     };
 </script>
 

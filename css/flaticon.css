@@ -1,0 +1,40 @@
+@font-face {
+	font-family: "Traditions";
+	src: url("../fonts/flaticon.eot");
+	src: url("../fonts/flaticon.eot#iefix") format("embedded-opentype"),
+	url("../fonts/flaticon.woff") format("woff"),
+	url("../fonts/flaticon.ttf") format("truetype"),
+	url("../fonts/flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="meal-"]:before, [class*=" meal-"]:before,
+[class^="meal-"]:after, [class*=" meal-"]:after {
+	font-family: Traditions;
+    font-size: 50px;
+	font-style: normal;
+}
+.meal-sides:before {
+	content: "\e000";
+}
+.meal-appetizers:before {
+	content: "\e001";
+}
+.meal-hot-dog:before {
+	content: "\e002";
+}
+.meal-entrees:before {
+	content: "\e003";
+}
+.meal-salad:before {
+	content: "\e004";
+}
+.meal-burger:before {
+	content: "\e005";
+}
+.meal-sandwich:before {
+	content: "\e006";
+}
+.meal-breakfast:before {
+	content: "\e007";
+}
